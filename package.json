@@ -1,0 +1,15 @@
+{
+  "name": "dcg-duel-widget",
+  "version": "1.0.0",
+  "description": "遊戯王マスターデュエル配信用ウィジェット",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-packager . DCG-Duel-Widget --platform=win32 --arch=x64 --icon=DCG_Duel_Widget_logo.ico --out=dist --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^37.2.1",
+    "electron-packager": "^17.1.2"
+  }
+}
