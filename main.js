@@ -7,8 +7,8 @@ let mainWindow;
 function createWindow() {
   // メインウィンドウを作成
   mainWindow = new BrowserWindow({
-    width: 300,
-    height: 200,
+    width: 400, // 幅を広げる
+    height: 350, // 高さを広げる
     x: 1600, // 画面の右側に配置
     y: 800,  // 画面の下側に配置
     frame: false, // ウィンドウフレームを非表示

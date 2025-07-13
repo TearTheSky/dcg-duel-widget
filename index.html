@@ -15,9 +15,37 @@
             user-select: none;
             -webkit-app-region: drag;
         }
+        .close-area {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2px;
+            -webkit-app-region: no-drag;
+        }
+        .close-btn {
+            background: #fff;
+            color: #222;
+            border: 2px solid #222;
+            border-radius: 50%;
+            font-family: 'Kosugi Maru', 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            width: 32px;
+            height: 32px;
+            line-height: 26px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #222;
+            margin-right: 2px;
+            margin-top: 2px;
+            transition: background 0.1s;
+        }
+        .close-btn:hover {
+            background: #eee;
+        }
         .main-table {
             background: #fff;
-            border: 3px solid #222;
+            border: 2px solid #222;
             border-radius: 4px;
             box-shadow: 2px 2px 0 #222;
             padding: 0;
@@ -29,11 +57,12 @@
             width: 100%;
         }
         th, td {
-            border: 2px solid #222;
-            padding: 2px 12px;
+            border: 1px solid #222;
+            padding: 2px 6px;
             text-align: center;
             font-family: 'Kosugi Maru', 'Arial', sans-serif;
             font-size: 24px;
+            vertical-align: middle;
         }
         th {
             background: #fff;
@@ -42,13 +71,21 @@
         .label {
             font-size: 22px;
             font-weight: bold;
+            width: 90px;
         }
         .value {
             font-size: 26px;
             font-weight: bold;
+            padding-left: 18px !important;
+            padding-right: 18px !important;
+            min-width: 50px;
         }
         .rate {
             font-size: 22px;
+            padding: 0 6px 0 6px !important;
+            min-width: 48px;
+            vertical-align: middle;
+            display: table-cell;
         }
         .btn-area {
             display: flex;
@@ -89,40 +126,27 @@
         .btn:hover {
             background: #eee;
         }
-        /* 罫線演出用 */
-        .cell-border-right {
-            border-right: 2px solid #222 !important;
-        }
     </style>
 </head>
 <body>
+    <div class="close-area">
+        <button class="close-btn" onclick="window.close()">×</button>
+    </div>
     <div class="main-table">
         <table>
             <tr>
                 <th class="label">試合数</th>
-                <td class="value" id="matchCount">0</td>
+                <td class="value" id="matchCount" colspan="2">0</td>
             </tr>
             <tr>
                 <th class="label">コイン</th>
-                <td style="padding:0;">
-                    <table style="width:100%;border:none;border-collapse:collapse;">
-                        <tr>
-                            <td class="value cell-border-right" id="coinSuccess" style="border-top:none;border-left:none;">0</td>
-                            <td class="rate" id="successRate" style="border-top:none;border-right:none;">0%</td>
-                        </tr>
-                    </table>
-                </td>
+                <td class="value" id="coinSuccess">0</td>
+                <td class="rate" id="successRate">0%</td>
             </tr>
             <tr>
                 <th class="label">勝利数</th>
-                <td style="padding:0;">
-                    <table style="width:100%;border:none;border-collapse:collapse;">
-                        <tr>
-                            <td class="value cell-border-right" id="winCount" style="border-top:none;border-left:none;">0</td>
-                            <td class="rate" id="winRate" style="border-top:none;border-right:none;">0%</td>
-                        </tr>
-                    </table>
-                </td>
+                <td class="value" id="winCount">0</td>
+                <td class="rate" id="winRate">0%</td>
             </tr>
         </table>
     </div>
