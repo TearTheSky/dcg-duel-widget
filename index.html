@@ -65,6 +65,27 @@
         .close-btn:hover {
             background: #eee;
         }
+        .min-btn {
+            background: #fff;
+            color: #222;
+            border: 2px solid #222;
+            border-radius: 4px;
+            font-family: 'Kosugi Maru', 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            width: 32px;
+            height: 32px;
+            line-height: 26px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #222;
+            margin-top: 2px;
+            transition: background 0.1s, color 0.1s, border 0.1s;
+            -webkit-app-region: no-drag;
+        }
+        .min-btn:hover {
+            background: #eee;
+        }
         .main-table {
             background: #fff;
             border: 2px solid #222;
@@ -177,7 +198,8 @@
         .main-table.theme-dark ~ .btn-area .btn-small:hover {
             background: #333;
         }
-        .main-table.theme-dark ~ .theme-area .close-btn {
+        .main-table.theme-dark ~ .theme-area .close-btn,
+        .main-table.theme-dark ~ .theme-area .min-btn {
             background: #222;
             color: #fff;
             border: 2px solid #444;
@@ -205,7 +227,8 @@
         .main-table.theme-pink ~ .btn-area .btn-small:hover {
             background: #ffd1ef;
         }
-        .main-table.theme-pink ~ .theme-area .close-btn {
+        .main-table.theme-pink ~ .theme-area .close-btn,
+        .main-table.theme-pink ~ .theme-area .min-btn {
             background: #ffe4f7;
             color: #c94fa0;
             border: 2px solid #f7b5e4;
@@ -233,7 +256,8 @@
         .main-table.theme-blackglass ~ .btn-area .btn-small:hover {
             background: rgba(40,40,40,0.8);
         }
-        .main-table.theme-blackglass ~ .theme-area .close-btn {
+        .main-table.theme-blackglass ~ .theme-area .close-btn,
+        .main-table.theme-blackglass ~ .theme-area .min-btn {
             background: rgba(20,20,20,0.7);
             color: #fff;
             border: 2px solid #444;
@@ -269,7 +293,8 @@
             color: #fffb00;
             border: 2px solid #0ff;
         }
-        .main-table.theme-cyber ~ .theme-area .close-btn {
+        .main-table.theme-cyber ~ .theme-area .close-btn,
+        .main-table.theme-cyber ~ .theme-area .min-btn {
             background: #111;
             color: #0ff;
             border: 2px solid #0ff;
@@ -305,7 +330,8 @@
             color: #fff;
             border: 2px solid #4fd3ff;
         }
-        .main-table.theme-marine ~ .theme-area .close-btn {
+        .main-table.theme-marine ~ .theme-area .close-btn,
+        .main-table.theme-marine ~ .theme-area .min-btn {
             background: #aeefff;
             color: #0077be;
             border: 2px solid #4fd3ff;
@@ -341,7 +367,8 @@
             color: #fff;
             border: 2px solid #ff9800;
         }
-        .main-table.theme-shakunetsu ~ .theme-area .close-btn {
+        .main-table.theme-shakunetsu ~ .theme-area .close-btn,
+        .main-table.theme-shakunetsu ~ .theme-area .min-btn {
             background: #ff9800;
             color: #fff;
             border: 2px solid #b71c1c;
@@ -372,7 +399,8 @@
         .main-table.theme-matcha ~ .btn-area .btn-small:hover {
             background: #cde7b0;
         }
-        .main-table.theme-matcha ~ .theme-area .close-btn {
+        .main-table.theme-matcha ~ .theme-area .close-btn,
+        .main-table.theme-matcha ~ .theme-area .min-btn {
             background: #e6f4d4;
             color: #3e5c2c;
             border: 2px solid #7bb661;
@@ -403,7 +431,8 @@
         .main-table.theme-choco ~ .btn-area .btn-small:hover {
             background: #a0522d;
         }
-        .main-table.theme-choco ~ .theme-area .close-btn {
+        .main-table.theme-choco ~ .theme-area .close-btn,
+        .main-table.theme-choco ~ .theme-area .min-btn {
             background: #b97a56;
             color: #fffbe6;
             border: 2px solid #a0522d;
@@ -431,7 +460,8 @@
         .main-table.theme-default ~ .btn-area .btn-small:hover {
             background: #eee;
         }
-        .main-table.theme-default ~ .theme-area .close-btn {
+        .main-table.theme-default ~ .theme-area .close-btn,
+        .main-table.theme-default ~ .theme-area .min-btn {
             background: #fff;
             color: #222;
             border: 2px solid #222;
@@ -470,7 +500,8 @@
             color: #fff;
             border: 2px solid #ffb300;
         }
-        .main-table.theme-great ~ .theme-area .close-btn {
+        .main-table.theme-great ~ .theme-area .close-btn,
+        .main-table.theme-great ~ .theme-area .min-btn {
             background: #1e3c72;
             color: #ff3c00;
             border: 2px solid #ffb300;
@@ -506,10 +537,259 @@
             color: #fff;
             border: 2px solid #b8c6db;
         }
-        .main-table.theme-hakugin ~ .theme-area .close-btn {
+        .main-table.theme-hakugin ~ .theme-area .close-btn,
+        .main-table.theme-hakugin ~ .theme-area .min-btn {
             background: #f8fbff;
             color: #6b7a8f;
             border: 2px solid #b8c6db;
+        }
+        .window-btns {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            margin-left: 8px;
+        }
+        .close-btn, .min-btn {
+            margin-right: 0;
+        }
+        /* --- テーマごとのボタン色 --- */
+        .btn-area.theme-dark .btn,
+        .btn-area.theme-dark .btn-small {
+            background: #222;
+            color: #fff;
+            border: 2px solid #444;
+            box-shadow: 1px 1px 0 #111;
+        }
+        .btn-area.theme-dark .btn:hover,
+        .btn-area.theme-dark .btn-small:hover {
+            background: #333;
+        }
+        .btn-area.theme-pink .btn,
+        .btn-area.theme-pink .btn-small {
+            background: #ffe4f7;
+            color: #c94fa0;
+            border: 2px solid #f7b5e4;
+            box-shadow: 1px 1px 0 #f7b5e4;
+        }
+        .btn-area.theme-pink .btn:hover,
+        .btn-area.theme-pink .btn-small:hover {
+            background: #ffd1ef;
+        }
+        .btn-area.theme-blackglass .btn,
+        .btn-area.theme-blackglass .btn-small {
+            background: rgba(20,20,20,0.7);
+            color: #fff;
+            border: 2px solid #444;
+            box-shadow: 1px 1px 0 #222;
+        }
+        .btn-area.theme-blackglass .btn:hover,
+        .btn-area.theme-blackglass .btn-small:hover {
+            background: rgba(40,40,40,0.8);
+        }
+        .btn-area.theme-cyber .btn,
+        .btn-area.theme-cyber .btn-small {
+            background: rgba(0,0,0,0.7);
+            color: #fffb00;
+            border: 2px solid #0ff;
+            box-shadow: 0 0 8px #0ff8;
+            text-shadow: 0 0 2px #0ff, 0 0 2px #fff;
+        }
+        .btn-area.theme-cyber .btn:hover,
+        .btn-area.theme-cyber .btn-small:hover {
+            background: rgba(0,0,0,0.9);
+            color: #fffb00;
+            border: 2px solid #0ff;
+        }
+        .btn-area.theme-marine .btn,
+        .btn-area.theme-marine .btn-small {
+            background: linear-gradient(90deg, #4fd3ff 0%, #aeefff 100%);
+            color: #0077be;
+            border: 2px solid #0077be;
+            box-shadow: 0 0 8px #4fd3ff88;
+            text-shadow: 0 0 2px #fff;
+        }
+        .btn-area.theme-marine .btn:hover,
+        .btn-area.theme-marine .btn-small:hover {
+            background: #0077be;
+            color: #fff;
+            border: 2px solid #4fd3ff;
+        }
+        .btn-area.theme-shakunetsu .btn,
+        .btn-area.theme-shakunetsu .btn-small {
+            background: linear-gradient(90deg, #ff9800 0%, #ff2d2d 100%);
+            color: #fff;
+            border: 2px solid #b71c1c;
+            box-shadow: 0 0 8px #ff980088;
+            text-shadow: 0 0 2px #fff;
+        }
+        .btn-area.theme-shakunetsu .btn:hover,
+        .btn-area.theme-shakunetsu .btn-small:hover {
+            background: #b71c1c;
+            color: #fff;
+            border: 2px solid #ff9800;
+        }
+        .btn-area.theme-matcha .btn,
+        .btn-area.theme-matcha .btn-small {
+            background: #e6f4d4;
+            color: #3e5c2c;
+            border: 2px solid #7bb661;
+            box-shadow: 1px 1px 0 #b2d8b2;
+        }
+        .btn-area.theme-matcha .btn:hover,
+        .btn-area.theme-matcha .btn-small:hover {
+            background: #cde7b0;
+        }
+        .btn-area.theme-choco .btn,
+        .btn-area.theme-choco .btn-small {
+            background: #b97a56;
+            color: #fffbe6;
+            border: 2px solid #a0522d;
+            box-shadow: 1px 1px 0 #a0522d;
+        }
+        .btn-area.theme-choco .btn:hover,
+        .btn-area.theme-choco .btn-small:hover {
+            background: #a0522d;
+        }
+        .btn-area.theme-default .btn,
+        .btn-area.theme-default .btn-small {
+            background: #fff;
+            color: #222;
+            border: 2px solid #222;
+            box-shadow: 1px 1px 0 #222;
+        }
+        .btn-area.theme-default .btn:hover,
+        .btn-area.theme-default .btn-small:hover {
+            background: #eee;
+        }
+        .btn-area.theme-great .btn,
+        .btn-area.theme-great .btn-small {
+            background: linear-gradient(90deg, #ff3c00 0%, #ffb300 100%);
+            color: #fff;
+            border: 2px solid #b71c1c;
+            box-shadow: 0 0 8px #ff3c0088;
+            text-shadow: 0 0 2px #fff;
+        }
+        .btn-area.theme-great .btn:hover,
+        .btn-area.theme-great .btn-small:hover {
+            background: #b71c1c;
+            color: #fff;
+            border: 2px solid #ffb300;
+        }
+        .btn-area.theme-hakugin .btn,
+        .btn-area.theme-hakugin .btn-small {
+            background: #f8fbff;
+            color: #6b7a8f;
+            border: 2px solid #b8c6db;
+            box-shadow: 0 0 8px #e3e8ef88;
+            text-shadow: 0 0 2px #fff;
+        }
+        .btn-area.theme-hakugin .btn:hover,
+        .btn-area.theme-hakugin .btn-small:hover {
+            background: #7fa7d6;
+            color: #fff;
+            border: 2px solid #b8c6db;
+        }
+        .theme-area.theme-dark .window-btns .close-btn,
+        .theme-area.theme-dark .window-btns .min-btn {
+            background: #222;
+            color: #fff;
+            border: 2px solid #444;
+        }
+        .theme-area.theme-pink .window-btns .close-btn,
+        .theme-area.theme-pink .window-btns .min-btn {
+            background: #ffe4f7;
+            color: #c94fa0;
+            border: 2px solid #f7b5e4;
+        }
+        .theme-area.theme-blackglass .window-btns .close-btn,
+        .theme-area.theme-blackglass .window-btns .min-btn {
+            background: rgba(20,20,20,0.7);
+            color: #fff;
+            border: 2px solid #444;
+        }
+        .theme-area.theme-cyber .window-btns .close-btn,
+        .theme-area.theme-cyber .window-btns .min-btn {
+            background: #111;
+            color: #0ff;
+            border: 2px solid #0ff;
+        }
+        .theme-area.theme-marine .window-btns .close-btn,
+        .theme-area.theme-marine .window-btns .min-btn {
+            background: #aeefff;
+            color: #0077be;
+            border: 2px solid #4fd3ff;
+        }
+        .theme-area.theme-shakunetsu .window-btns .close-btn,
+        .theme-area.theme-shakunetsu .window-btns .min-btn {
+            background: #ff9800;
+            color: #fff;
+            border: 2px solid #b71c1c;
+        }
+        .theme-area.theme-matcha .window-btns .close-btn,
+        .theme-area.theme-matcha .window-btns .min-btn {
+            background: #e6f4d4;
+            color: #3e5c2c;
+            border: 2px solid #7bb661;
+        }
+        .theme-area.theme-choco .window-btns .close-btn,
+        .theme-area.theme-choco .window-btns .min-btn {
+            background: #b97a56;
+            color: #fffbe6;
+            border: 2px solid #a0522d;
+        }
+        .theme-area.theme-default .window-btns .close-btn,
+        .theme-area.theme-default .window-btns .min-btn {
+            background: #fff;
+            color: #222;
+            border: 2px solid #222;
+        }
+        .theme-area.theme-great .window-btns .close-btn,
+        .theme-area.theme-great .window-btns .min-btn {
+            background: #1e3c72;
+            color: #ff3c00;
+            border: 2px solid #ffb300;
+        }
+        .theme-area.theme-hakugin .window-btns .close-btn,
+        .theme-area.theme-hakugin .window-btns .min-btn {
+            background: #f8fbff;
+            color: #6b7a8f;
+            border: 2px solid #b8c6db;
+        }
+        .main-table.theme-pure {
+            background: linear-gradient(135deg, #fffafd 0%, #f3faff 60%, #fff7ef 100%);
+            color: #b48fc0;
+            border: 2px solid #f7cfff;
+            box-shadow: 0 0 8px #f7cfff44, 0 0 12px #e3f6ff33;
+        }
+        .main-table.theme-pure th, .main-table.theme-pure td {
+            background: linear-gradient(90deg, #FDF1DF 0%, #F1F1D3 100%);
+            color: #46382C;
+            border: 1px solid #C38FAB;
+            text-shadow: 0 0 2px #ffeedd, 0 0 1px #fff;
+        }
+        .main-table.theme-pure .value, .main-table.theme-pure .rate {
+            color: #46382C;
+            text-shadow: 0 0 2px #e3f6ff, 0 0 1px #fff;
+        }
+        .btn-area.theme-pure .btn,
+        .btn-area.theme-pure .btn-small {
+            background: linear-gradient(90deg, #FDF1DF 0%, #F1F1D3 100%);
+            color: #46382C;
+            border: 2px solid #C38FAB;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        .btn-area.theme-pure .btn:hover,
+        .btn-area.theme-pure .btn-small:hover {
+            background: #F1F1D3;
+            color: #C38FAB;
+            border: 2px solid #C38FAB;
+        }
+        .theme-area.theme-pure .window-btns .close-btn,
+        .theme-area.theme-pure .window-btns .min-btn {
+            background: #FDF1DF;
+            color: #46382C;
+            border: 2px solid #C38FAB;
         }
     </style>
 </head>
@@ -529,27 +809,39 @@
                 <option value="shakunetsu">灼熱</option>
                 <option value="great">グレイト</option>
                 <option value="hakugin">白銀城</option>
+                <option value="pure">ピュア</option>
             </select>
         </div>
-        <button class="close-btn" onclick="window.close()">×</button>
+        <div class="window-btns">
+            <button class="min-btn" onclick="window.minimizeApp && window.minimizeApp()">―</button>
+            <button class="close-btn" onclick="window.close()">×</button>
+        </div>
     </div>
-    <div class="main-table theme-default" id="mainTable">
-        <table>
-            <tr>
-                <th class="label">試合数</th>
-                <td class="value" id="matchCount" colspan="2">0</td>
-            </tr>
-            <tr>
-                <th class="label">コイン</th>
-                <td class="value" id="coinSuccess">0</td>
-                <td class="rate" id="successRate">0%</td>
-            </tr>
-            <tr>
-                <th class="label">勝利数</th>
-                <td class="value" id="winCount">0</td>
-                <td class="rate" id="winRate">0%</td>
-            </tr>
-        </table>
+    <div style="display: flex; flex-direction: row; align-items: flex-start; justify-content: center; gap: 24px;">
+        <div class="main-table theme-default" id="mainTable">
+            <table>
+                <tr>
+                    <th class="label">試合数</th>
+                    <td class="value" id="matchCount" colspan="2">0</td>
+                </tr>
+                <tr>
+                    <th class="label">コイン</th>
+                    <td class="value" id="coinSuccess">0</td>
+                    <td class="rate" id="successRate">0%</td>
+                </tr>
+                <tr>
+                    <th class="label">勝利数</th>
+                    <td class="value" id="winCount">0</td>
+                    <td class="rate" id="winRate">0%</td>
+                </tr>
+            </table>
+        </div>
+        <div id="detailArea" style="min-width:110px; margin-top:8px; font-size:6px; color:#fff; text-align:left; line-height:1.7; user-select:none;">
+            <table style="border:none; width:auto; background:none; color:#fff; font-size:6px;">
+                <tr><td style="border:none; padding:0 4px 0 0; font-size:18px;">成功数：</td><td id="detailCoinSuccess" style="border:none; padding:0 8px 0 0; font-size:18px;">0</td><td style="border:none; padding:0 4px 0 0; font-size:18px;">失敗数：</td><td id="detailCoinFail" style="border:none; font-size:18px;">0</td></tr>
+                <tr><td style="border:none; padding:0 4px 0 0; font-size:18px;">勝利数：</td><td id="detailWin" style="border:none; padding:0 8px 0 0; font-size:18px;">0</td><td style="border:none; padding:0 4px 0 0; font-size:18px;">敗北数：</td><td id="detailLose" style="border:none; font-size:18px;">0</td></tr>
+            </table>
+        </div>
     </div>
     <div class="btn-area">
         <div class="btn-row">
@@ -576,6 +868,11 @@
             document.getElementById('successRate').textContent = (totalCoins > 0 ? Math.round((coinSuccesses / totalCoins) * 100) : 0) + '%';
             document.getElementById('winCount').textContent = wins;
             document.getElementById('winRate').textContent = (totalMatches > 0 ? Math.round((wins / totalMatches) * 100) : 0) + '%';
+            // 詳細エリアも更新
+            document.getElementById('detailCoinSuccess').textContent = coinSuccesses;
+            document.getElementById('detailCoinFail').textContent = coinFails;
+            document.getElementById('detailWin').textContent = wins;
+            document.getElementById('detailLose').textContent = losses;
         }
         function addWin() { wins++; updateDisplay(); }
         function addLose() { losses++; updateDisplay(); }
@@ -587,6 +884,10 @@
             const theme = this.value;
             const mainTable = document.getElementById('mainTable');
             mainTable.className = 'main-table theme-' + theme;
+            // テーマエリアにもクラスを付与
+            document.querySelector('.theme-area').className = 'theme-area theme-' + theme;
+            // ボタンエリアにもクラスを付与
+            document.querySelector('.btn-area').className = 'btn-area theme-' + theme;
         });
         // キーボードショートカットも有効
         document.addEventListener('keydown', (e) => {
