@@ -9,8 +9,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 400, // 幅を広げる
     height: 350, // 高さを広げる
-    x: 1600, // 画面の右側に配置
-    y: 800,  // 画面の下側に配置
+    center: true, // 画面中央に表示
     frame: false, // ウィンドウフレームを非表示
     transparent: true, // 背景を透明に
     alwaysOnTop: true, // 常に最前面に表示
