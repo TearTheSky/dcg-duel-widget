@@ -1,15 +1,21 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, screen } = require('electron');
 const path = require('path');
 
 // メインウィンドウの参照を保持
 let mainWindow;
 
 function createWindow() {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+  const winWidth = 400, winHeight = 250;
+  const x = Math.round((width - winWidth) / 2);
+  const y = 300;
+
   // メインウィンドウを作成
   mainWindow = new BrowserWindow({
-    width: 400, // 幅を広げる
-    height: 350, // 高さを広げる
-    center: true, // 画面中央に表示
+    width: winWidth,
+    height: winHeight,
+    x: x,
+    y: y,
     frame: false, // ウィンドウフレームを非表示
     transparent: true, // 背景を透明に
     alwaysOnTop: true, // 常に最前面に表示
