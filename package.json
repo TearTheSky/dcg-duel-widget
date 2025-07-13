@@ -1,0 +1,13 @@
+{
+  "name": "dcg-duel-widget",
+  "version": "1.0.0",
+  "description": "遊戯王マスターデュエル配信用ウィジェット",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^37.2.1"
+  }
+}

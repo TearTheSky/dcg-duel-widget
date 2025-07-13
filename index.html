@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DCG Duel Widget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgba(0, 0, 0, 0.0);
+            color: #000;
+            font-family: 'Kosugi Maru', 'Arial', sans-serif;
+            font-size: 18px;
+            user-select: none;
+            -webkit-app-region: drag;
+        }
+        .main-table {
+            background: #fff;
+            border: 3px solid #222;
+            border-radius: 4px;
+            box-shadow: 2px 2px 0 #222;
+            padding: 0;
+            min-width: 150px;
+            display: inline-block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid #222;
+            padding: 2px 12px;
+            text-align: center;
+            font-family: 'Kosugi Maru', 'Arial', sans-serif;
+            font-size: 24px;
+        }
+        th {
+            background: #fff;
+            font-weight: bold;
+        }
+        .label {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .value {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .rate {
+            font-size: 22px;
+        }
+        .btn-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            -webkit-app-region: no-drag;
+        }
+        .btn-row {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            justify-content: center;
+        }
+        .btn {
+            background: #fff;
+            color: #222;
+            border: 2px solid #222;
+            border-radius: 4px;
+            font-family: 'Kosugi Maru', 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 8px;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #222;
+            transition: background 0.1s;
+            min-width: 60px;
+            max-width: 90px;
+            white-space: nowrap;
+        }
+        .btn-small {
+            font-size: 12px;
+            padding: 2px 6px;
+            min-width: 54px;
+            max-width: 80px;
+        }
+        .btn:hover {
+            background: #eee;
+        }
+        /* 罫線演出用 */
+        .cell-border-right {
+            border-right: 2px solid #222 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-table">
+        <table>
+            <tr>
+                <th class="label">試合数</th>
+                <td class="value" id="matchCount">0</td>
+            </tr>
+            <tr>
+                <th class="label">コイン</th>
+                <td style="padding:0;">
+                    <table style="width:100%;border:none;border-collapse:collapse;">
+                        <tr>
+                            <td class="value cell-border-right" id="coinSuccess" style="border-top:none;border-left:none;">0</td>
+                            <td class="rate" id="successRate" style="border-top:none;border-right:none;">0%</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th class="label">勝利数</th>
+                <td style="padding:0;">
+                    <table style="width:100%;border:none;border-collapse:collapse;">
+                        <tr>
+                            <td class="value cell-border-right" id="winCount" style="border-top:none;border-left:none;">0</td>
+                            <td class="rate" id="winRate" style="border-top:none;border-right:none;">0%</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn-area">
+        <div class="btn-row">
+            <button class="btn btn-small" onclick="addCoinSuccess()">コイン成功</button>
+            <button class="btn btn-small" onclick="addCoinFail()">コイン失敗</button>
+            <button class="btn btn-small" onclick="resetAll()">リセット</button>
+        </div>
+        <div class="btn-row">
+            <button class="btn" onclick="addWin()">勝利</button>
+            <button class="btn" onclick="addLose()">敗北</button>
+        </div>
+    </div>
+    <script>
+        let wins = 0;
+        let losses = 0;
+        let coinSuccesses = 0;
+        let coinFails = 0;
+
+        function updateDisplay() {
+            const totalMatches = wins + losses;
+            const totalCoins = coinSuccesses + coinFails;
+            document.getElementById('matchCount').textContent = totalMatches;
+            document.getElementById('coinSuccess').textContent = coinSuccesses;
+            document.getElementById('successRate').textContent = (totalCoins > 0 ? Math.round((coinSuccesses / totalCoins) * 100) : 0) + '%';
+            document.getElementById('winCount').textContent = wins;
+            document.getElementById('winRate').textContent = (totalMatches > 0 ? Math.round((wins / totalMatches) * 100) : 0) + '%';
+        }
+        function addWin() { wins++; updateDisplay(); }
+        function addLose() { losses++; updateDisplay(); }
+        function addCoinSuccess() { coinSuccesses++; updateDisplay(); }
+        function addCoinFail() { coinFails++; updateDisplay(); }
+        function resetAll() { wins=0; losses=0; coinSuccesses=0; coinFails=0; updateDisplay(); }
+        // キーボードショートカットも有効
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'w': case 'W': addWin(); break;
+                case 'l': case 'L': addLose(); break;
+                case 's': case 'S': addCoinSuccess(); break;
+                case 'f': case 'F': addCoinFail(); break;
+                case 'r': case 'R': resetAll(); break;
+            }
+        });
+        updateDisplay();
+    </script>
+</body>
+</html> 
