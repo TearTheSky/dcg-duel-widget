@@ -1,0 +1,64 @@
+<!-- シャドウバースWB用ウィジェットテンプレート -->
+<div class="theme-area">
+    <div class="theme-left">
+        <label for="themeSelect">テーマ:</label>
+        <select id="themeSelect" class="theme-select">
+            <option value="default">デフォルト</option>
+            <option value="dark">ダーク</option>
+            <option value="pink">綿菓子ピンク</option>
+            <option value="blackglass">黒透明</option>
+            <option value="cyber">サイバー</option>
+            <option value="matcha">抹茶</option>
+            <option value="choco">チョコ</option>
+            <option value="marine">マリン</option>
+            <option value="shakunetsu">灼熱</option>
+            <option value="great">グレイト</option>
+            <option value="hakugin">白銀城</option>
+            <option value="pure">ピュア</option>
+        </select>
+    </div>
+    <div class="window-btns">
+        <button class="min-btn" onclick="window.minimizeApp && window.minimizeApp()">―</button>
+        <button class="close-btn" onclick="window.close()">×</button>
+    </div>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: flex-start; justify-content: center; gap: 24px;">
+    <div class="main-table theme-default" id="mainTable">
+        <table>
+            <tr>
+                <th class="label">試合数</th>
+                <td class="value" id="matchCount" colspan="2">0</td>
+            </tr>
+            <tr>
+                <th class="label" id="coinLabel">先攻</th>
+                <td class="value" id="coinSuccess">0</td>
+                <td class="rate" id="successRate">0%</td>
+            </tr>
+            <tr>
+                <th class="label">勝利数</th>
+                <td class="value" id="winCount">0</td>
+                <td class="rate" id="winRate">0%</td>
+            </tr>
+        </table>
+    </div>
+    <div id="detailArea" style="min-width:110px; margin-top:8px; font-size:6px; color:#fff; text-align:left; line-height:1.7; user-select:none;">
+        <table style="border:none; width:auto; background:none; color:#fff; font-size:6px;">
+            <tr><td style="border:none; padding:0 4px 0 0; font-size:18px;" id="detailLabel1">先攻数：</td><td id="detailCoinSuccess" style="border:none; padding:0 8px 0 0; font-size:18px;">0</td><td style="border:none; padding:0 4px 0 0; font-size:18px;" id="detailLabel2">後攻数：</td><td id="detailCoinFail" style="border:none; font-size:18px;">0</td></tr>
+            <tr><td style="border:none; padding:0 4px 0 0; font-size:18px;">勝利数：</td><td id="detailWin" style="border:none; padding:0 8px 0 0; font-size:18px;">0</td><td style="border:none; padding:0 4px 0 0; font-size:18px;">敗北数：</td><td id="detailLose" style="border:none; font-size:18px;">0</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="btn-area">
+    <div class="btn-row">
+        <button class="btn btn-small" onclick="addCoinSuccess()">先攻</button>
+        <button class="btn btn-small" onclick="addCoinFail()">後攻</button>
+        <button class="btn btn-small" onclick="resetAll()">リセット</button>
+    </div>
+    <div class="btn-row">
+        <button class="btn" onclick="addWin()">勝利</button>
+        <button class="btn" onclick="addLose()">敗北</button>
+        <button class="btn btn-small" onclick="toggleFirstSecond()">先攻🔃後攻</button>
+    </div>
+</div> 
