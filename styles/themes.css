@@ -1,0 +1,467 @@
+/* テーマ: デフォルト */
+.main-table.theme-default {
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+    box-shadow: 2px 2px 0 #222;
+}
+
+.main-table.theme-default th, .main-table.theme-default td {
+    background: #fff;
+    color: #222;
+    border: 1px solid #222;
+}
+
+.main-table.theme-default ~ .btn-area .btn,
+.main-table.theme-default ~ .btn-area .btn-small {
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 0 #222;
+}
+
+.main-table.theme-default ~ .btn-area .btn:hover,
+.main-table.theme-default ~ .btn-area .btn-small:hover {
+    background: #eee;
+}
+
+.theme-area.theme-default .window-btns .close-btn,
+.theme-area.theme-default .window-btns .min-btn {
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+}
+
+/* テーマ: ダーク */
+.main-table.theme-dark {
+    background: #222;
+    color: #fff;
+    border: 2px solid #444;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.main-table.theme-dark th, .main-table.theme-dark td {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.main-table.theme-dark ~ .btn-area .btn,
+.main-table.theme-dark ~ .btn-area .btn-small {
+    background: #222;
+    color: #fff;
+    border: 2px solid #444;
+    box-shadow: 1px 1px 0 #111;
+}
+
+.main-table.theme-dark ~ .btn-area .btn:hover,
+.main-table.theme-dark ~ .btn-area .btn-small:hover {
+    background: #333;
+}
+
+.theme-area.theme-dark .window-btns .close-btn,
+.theme-area.theme-dark .window-btns .min-btn {
+    background: #222;
+    color: #fff;
+    border: 2px solid #444;
+}
+
+/* テーマ: ピンク（綿菓子） */
+.main-table.theme-pink {
+    background: #ffe4f7;
+    color: #c94fa0;
+    border: 2px solid #f7b5e4;
+    box-shadow: 2px 2px 0 #f7b5e4;
+}
+
+.main-table.theme-pink th, .main-table.theme-pink td {
+    background: #ffe4f7;
+    color: #c94fa0;
+    border: 1px solid #f7b5e4;
+}
+
+.main-table.theme-pink ~ .btn-area .btn,
+.main-table.theme-pink ~ .btn-area .btn-small {
+    background: #ffe4f7;
+    color: #c94fa0;
+    border: 2px solid #f7b5e4;
+    box-shadow: 1px 1px 0 #f7b5e4;
+}
+
+.main-table.theme-pink ~ .btn-area .btn:hover,
+.main-table.theme-pink ~ .btn-area .btn-small:hover {
+    background: #ffd1ef;
+}
+
+.theme-area.theme-pink .window-btns .close-btn,
+.theme-area.theme-pink .window-btns .min-btn {
+    background: #ffe4f7;
+    color: #c94fa0;
+    border: 2px solid #f7b5e4;
+}
+
+/* テーマ: 黒透明 */
+.main-table.theme-blackglass {
+    background: rgba(20,20,20,0.7);
+    color: #fff;
+    border: 2px solid #444;
+    box-shadow: 2px 2px 8px #0008;
+}
+
+.main-table.theme-blackglass th, .main-table.theme-blackglass td {
+    background: rgba(20,20,20,0.7);
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.main-table.theme-blackglass ~ .btn-area .btn,
+.main-table.theme-blackglass ~ .btn-area .btn-small {
+    background: rgba(20,20,20,0.7);
+    color: #fff;
+    border: 2px solid #444;
+    box-shadow: 1px 1px 0 #222;
+}
+
+.main-table.theme-blackglass ~ .btn-area .btn:hover,
+.main-table.theme-blackglass ~ .btn-area .btn-small:hover {
+    background: rgba(40,40,40,0.8);
+}
+
+.theme-area.theme-blackglass .window-btns .close-btn,
+.theme-area.theme-blackglass .window-btns .min-btn {
+    background: rgba(20,20,20,0.7);
+    color: #fff;
+    border: 2px solid #444;
+}
+
+/* テーマ: サイバー */
+.main-table.theme-cyber {
+    background: linear-gradient(135deg, #0ff 0%, #00f 100%);
+    color: #fff;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 16px #0ff8, 0 0 32px #00f8;
+}
+
+.main-table.theme-cyber th, .main-table.theme-cyber td {
+    background: rgba(0,0,0,0.7);
+    color: #fffb00;
+    border: 1px solid #0ff;
+    text-shadow: 0 0 4px #0ff, 0 0 2px #00f, 0 0 2px #fff;
+}
+
+.main-table.theme-cyber .value, .main-table.theme-cyber .rate {
+    color: #fffb00;
+    text-shadow: 0 0 6px #0ff, 0 0 2px #fff;
+}
+
+.main-table.theme-cyber ~ .btn-area .btn,
+.main-table.theme-cyber ~ .btn-area .btn-small {
+    background: rgba(0,0,0,0.7);
+    color: #fffb00;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 8px #0ff8;
+    text-shadow: 0 0 2px #0ff, 0 0 2px #fff;
+}
+
+.main-table.theme-cyber ~ .btn-area .btn:hover,
+.main-table.theme-cyber ~ .btn-area .btn-small:hover {
+    background: rgba(0,0,0,0.9);
+    color: #fffb00;
+    border: 2px solid #0ff;
+}
+
+.theme-area.theme-cyber .window-btns .close-btn,
+.theme-area.theme-cyber .window-btns .min-btn {
+    background: #111;
+    color: #0ff;
+    border: 2px solid #0ff;
+}
+
+/* テーマ: マリン */
+.main-table.theme-marine {
+    background: linear-gradient(135deg, #aeefff 0%, #0077be 100%);
+    color: #fff;
+    border: 2px solid #4fd3ff;
+    box-shadow: 0 0 16px #4fd3ff88, 0 0 32px #0077be88;
+}
+
+.main-table.theme-marine th, .main-table.theme-marine td {
+    background: rgba(0,80,160,0.7);
+    color: #fff;
+    border: 1px solid #4fd3ff;
+    text-shadow: 0 0 4px #4fd3ff, 0 0 2px #fff;
+}
+
+.main-table.theme-marine .value, .main-table.theme-marine .rate {
+    color: #fff;
+    text-shadow: 0 0 6px #4fd3ff, 0 0 2px #fff;
+}
+
+.main-table.theme-marine ~ .btn-area .btn,
+.main-table.theme-marine ~ .btn-area .btn-small {
+    background: linear-gradient(90deg, #4fd3ff 0%, #aeefff 100%);
+    color: #0077be;
+    border: 2px solid #0077be;
+    box-shadow: 0 0 8px #4fd3ff88;
+    text-shadow: 0 0 2px #fff;
+}
+
+.main-table.theme-marine ~ .btn-area .btn:hover,
+.main-table.theme-marine ~ .btn-area .btn-small:hover {
+    background: #0077be;
+    color: #fff;
+    border: 2px solid #4fd3ff;
+}
+
+.theme-area.theme-marine .window-btns .close-btn,
+.theme-area.theme-marine .window-btns .min-btn {
+    background: #aeefff;
+    color: #0077be;
+    border: 2px solid #4fd3ff;
+}
+
+/* テーマ: 灼熱 */
+.main-table.theme-shakunetsu {
+    background: linear-gradient(135deg, #ff9800 0%, #ff2d2d 100%);
+    color: #fff;
+    border: 2px solid #ff9800;
+    box-shadow: 0 0 16px #ff980088, 0 0 32px #ff2d2d88;
+}
+
+.main-table.theme-shakunetsu th, .main-table.theme-shakunetsu td {
+    background: rgba(255,80,0,0.7);
+    color: #fff;
+    border: 1px solid #ff9800;
+    text-shadow: 0 0 4px #ff9800, 0 0 2px #fff;
+}
+
+.main-table.theme-shakunetsu .value, .main-table.theme-shakunetsu .rate {
+    color: #fff;
+    text-shadow: 0 0 6px #ff9800, 0 0 2px #fff;
+}
+
+.main-table.theme-shakunetsu ~ .btn-area .btn,
+.main-table.theme-shakunetsu ~ .btn-area .btn-small {
+    background: linear-gradient(90deg, #ff9800 0%, #ff2d2d 100%);
+    color: #fff;
+    border: 2px solid #b71c1c;
+    box-shadow: 0 0 8px #ff980088;
+    text-shadow: 0 0 2px #fff;
+}
+
+.main-table.theme-shakunetsu ~ .btn-area .btn:hover,
+.main-table.theme-shakunetsu ~ .btn-area .btn-small:hover {
+    background: #b71c1c;
+    color: #fff;
+    border: 2px solid #ff9800;
+}
+
+.theme-area.theme-shakunetsu .window-btns .close-btn,
+.theme-area.theme-shakunetsu .window-btns .min-btn {
+    background: #ff9800;
+    color: #fff;
+    border: 2px solid #b71c1c;
+}
+
+/* テーマ: 抹茶 */
+.main-table.theme-matcha {
+    background: linear-gradient(135deg, #e6f4d4 0%, #b2d8b2 100%);
+    color: #3e5c2c;
+    border: 2px solid #7bb661;
+    box-shadow: 2px 2px 0 #b2d8b2;
+}
+
+.main-table.theme-matcha th, .main-table.theme-matcha td {
+    background: #e6f4d4;
+    color: #3e5c2c;
+    border: 1px solid #7bb661;
+}
+
+.main-table.theme-matcha .value, .main-table.theme-matcha .rate {
+    color: #5c7f3a;
+}
+
+.main-table.theme-matcha ~ .btn-area .btn,
+.main-table.theme-matcha ~ .btn-area .btn-small {
+    background: #e6f4d4;
+    color: #3e5c2c;
+    border: 2px solid #7bb661;
+    box-shadow: 1px 1px 0 #b2d8b2;
+}
+
+.main-table.theme-matcha ~ .btn-area .btn:hover,
+.main-table.theme-matcha ~ .btn-area .btn-small:hover {
+    background: #cde7b0;
+}
+
+.theme-area.theme-matcha .window-btns .close-btn,
+.theme-area.theme-matcha .window-btns .min-btn {
+    background: #e6f4d4;
+    color: #3e5c2c;
+    border: 2px solid #7bb661;
+}
+
+/* テーマ: チョコ */
+.main-table.theme-choco {
+    background: linear-gradient(135deg, #b97a56 0%, #8b4513 100%);
+    color: #fffbe6;
+    border: 2px solid #a0522d;
+    box-shadow: 2px 2px 0 #8b4513;
+}
+
+.main-table.theme-choco th, .main-table.theme-choco td {
+    background: #b97a56;
+    color: #fffbe6;
+    border: 1px solid #a0522d;
+}
+
+.main-table.theme-choco .value, .main-table.theme-choco .rate {
+    color: #fffbe6;
+}
+
+.main-table.theme-choco ~ .btn-area .btn,
+.main-table.theme-choco ~ .btn-area .btn-small {
+    background: #b97a56;
+    color: #fffbe6;
+    border: 2px solid #a0522d;
+    box-shadow: 1px 1px 0 #8b4513;
+}
+
+.main-table.theme-choco ~ .btn-area .btn:hover,
+.main-table.theme-choco ~ .btn-area .btn-small:hover {
+    background: #a0522d;
+}
+
+.theme-area.theme-choco .window-btns .close-btn,
+.theme-area.theme-choco .window-btns .min-btn {
+    background: #b97a56;
+    color: #fffbe6;
+    border: 2px solid #a0522d;
+}
+
+/* テーマ: グレイト */
+.main-table.theme-great {
+    background: linear-gradient(135deg, #1e3c72 0%, #ff3c00 100%);
+    color: #fff;
+    border: 2px solid #ffb300;
+    box-shadow: 0 0 16px #ffb30088, 0 0 32px #ff3c0088;
+}
+
+.main-table.theme-great th, .main-table.theme-great td {
+    background: rgba(30,60,114,0.8);
+    color: #fff;
+    border: 1px solid #ffb300;
+    text-shadow: 0 0 4px #ffb300, 0 0 2px #fff;
+}
+
+.main-table.theme-great .value, .main-table.theme-great .rate {
+    color: #ffb300;
+    text-shadow: 0 0 6px #ffb300, 0 0 2px #fff;
+}
+
+.main-table.theme-great ~ .btn-area .btn,
+.main-table.theme-great ~ .btn-area .btn-small {
+    background: linear-gradient(90deg, #ffb300 0%, #ff3c00 100%);
+    color: #1e3c72;
+    border: 2px solid #1e3c72;
+    box-shadow: 0 0 8px #ffb30088;
+    text-shadow: 0 0 2px #fff;
+}
+
+.main-table.theme-great ~ .btn-area .btn:hover,
+.main-table.theme-great ~ .btn-area .btn-small:hover {
+    background: #1e3c72;
+    color: #ffb300;
+    border: 2px solid #ffb300;
+}
+
+.theme-area.theme-great .window-btns .close-btn,
+.theme-area.theme-great .window-btns .min-btn {
+    background: #1e3c72;
+    color: #ff3c00;
+    border: 2px solid #ffb300;
+}
+
+/* テーマ: 白銀城 */
+.main-table.theme-hakugin {
+    background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+    color: #6b7a8f;
+    border: 2px solid #b8c6db;
+    box-shadow: 0 0 8px #b8c6db44, 0 0 12px #e3f2fd33;
+}
+
+.main-table.theme-hakugin th, .main-table.theme-hakugin td {
+    background: #f8fbff;
+    color: #6b7a8f;
+    border: 1px solid #b8c6db;
+}
+
+.main-table.theme-hakugin .value, .main-table.theme-hakugin .rate {
+    color: #6b7a8f;
+}
+
+.main-table.theme-hakugin ~ .btn-area .btn,
+.main-table.theme-hakugin ~ .btn-area .btn-small {
+    background: #f8fbff;
+    color: #6b7a8f;
+    border: 2px solid #b8c6db;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.main-table.theme-hakugin ~ .btn-area .btn:hover,
+.main-table.theme-hakugin ~ .btn-area .btn-small:hover {
+    background: #e3f2fd;
+    color: #6b7a8f;
+    border: 2px solid #b8c6db;
+}
+
+.theme-area.theme-hakugin .window-btns .close-btn,
+.theme-area.theme-hakugin .window-btns .min-btn {
+    background: #f8fbff;
+    color: #6b7a8f;
+    border: 2px solid #b8c6db;
+}
+
+/* テーマ: ピュア */
+.main-table.theme-pure {
+    background: linear-gradient(135deg, #fffafd 0%, #f3faff 60%, #fff7ef 100%);
+    color: #b48fc0;
+    border: 2px solid #f7cfff;
+    box-shadow: 0 0 8px #f7cfff44, 0 0 12px #e3f6ff33;
+}
+
+.main-table.theme-pure th, .main-table.theme-pure td {
+    background: linear-gradient(90deg, #FDF1DF 0%, #F1F1D3 100%);
+    color: #46382C;
+    border: 1px solid #C38FAB;
+    text-shadow: 0 0 2px #ffeedd, 0 0 1px #fff;
+}
+
+.main-table.theme-pure .value, .main-table.theme-pure .rate {
+    color: #46382C;
+    text-shadow: 0 0 2px #e3f6ff, 0 0 1px #fff;
+}
+
+.btn-area.theme-pure .btn,
+.btn-area.theme-pure .btn-small {
+    background: linear-gradient(90deg, #FDF1DF 0%, #F1F1D3 100%);
+    color: #46382C;
+    border: 2px solid #C38FAB;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.btn-area.theme-pure .btn:hover,
+.btn-area.theme-pure .btn-small:hover {
+    background: #F1F1D3;
+    color: #C38FAB;
+    border: 2px solid #C38FAB;
+}
+
+.theme-area.theme-pure .window-btns .close-btn,
+.theme-area.theme-pure .window-btns .min-btn {
+    background: #FDF1DF;
+    color: #46382C;
+    border: 2px solid #C38FAB;
+} 
