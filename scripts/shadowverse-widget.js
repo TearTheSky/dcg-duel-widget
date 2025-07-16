@@ -19,6 +19,7 @@ class ShadowverseWidget extends BaseWidget {
             document.getElementById('coinLabel').textContent = '先攻';
             document.getElementById('coinSuccess').textContent = this.firstCount;
             document.getElementById('successRate').textContent = (totalTurns > 0 ? Math.round((this.firstCount / totalTurns) * 100) : 0) + '%';
+            // インジケーターは常に「先攻数：」「後攻数：」の順番で固定
             document.getElementById('detailLabel1').textContent = '先攻数：';
             document.getElementById('detailLabel2').textContent = '後攻数：';
             document.getElementById('detailCoinSuccess').textContent = this.firstCount;
@@ -27,29 +28,24 @@ class ShadowverseWidget extends BaseWidget {
             document.getElementById('coinLabel').textContent = '後攻';
             document.getElementById('coinSuccess').textContent = this.secondCount;
             document.getElementById('successRate').textContent = (totalTurns > 0 ? Math.round((this.secondCount / totalTurns) * 100) : 0) + '%';
-            document.getElementById('detailLabel1').textContent = '後攻数：';
-            document.getElementById('detailLabel2').textContent = '先攻数：';
-            document.getElementById('detailCoinSuccess').textContent = this.secondCount;
-            document.getElementById('detailCoinFail').textContent = this.firstCount;
+            // インジケーターは常に「先攻数：」「後攻数：」の順番で固定
+            document.getElementById('detailLabel1').textContent = '先攻数：';
+            document.getElementById('detailLabel2').textContent = '後攻数：';
+            document.getElementById('detailCoinSuccess').textContent = this.firstCount;
+            document.getElementById('detailCoinFail').textContent = this.secondCount;
         }
     }
 
     // シャドウバースWB用の先攻/後攻関数
     addCoinSuccess() { 
-        if (this.isFirstMode) {
-            this.firstCount++;
-        } else {
-            this.secondCount++;
-        }
+        // 「先攻」ボタンが押された時は常に先攻にカウントアップ
+        this.firstCount++;
         this.updateDisplay(); 
     }
 
     addCoinFail() { 
-        if (this.isFirstMode) {
-            this.secondCount++;
-        } else {
-            this.firstCount++;
-        }
+        // 「後攻」ボタンが押された時は常に後攻にカウントアップ
+        this.secondCount++;
         this.updateDisplay(); 
     }
 

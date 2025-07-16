@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron .",
-    "build": "electron-packager . DCG-Duel-Widget --platform=win32 --arch=x64 --icon=DCG_Duel_Widget_logo.ico --out=dist --overwrite"
+    "build": "electron-packager . DCG-Duel-Widget --platform=win32 --arch=x64 --icon=assets/DCG_Duel_Widget_logo.ico --out=dist --overwrite"
   },
   "devDependencies": {
     "electron": "^37.2.1",
