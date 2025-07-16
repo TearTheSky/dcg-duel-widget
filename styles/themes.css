@@ -464,4 +464,101 @@
     background: #FDF1DF;
     color: #46382C;
     border: 2px solid #C38FAB;
+}
+
+/* テーマ: 伽藍 */
+.main-table.theme-garan {
+    background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 50%, #1a0f0a 100%);
+    color: #e8d5c4;
+    border: 2px solid #8b4513;
+    box-shadow: 0 0 12px #8b451344, 0 0 20px #2c181033;
+}
+
+.main-table.theme-garan th, .main-table.theme-garan td {
+    background: #2c1810;
+    color: #e8d5c4;
+    border: 1px solid #8b4513;
+    text-shadow: 0 0 2px #e8d5c4;
+}
+
+.main-table.theme-garan .value, .main-table.theme-garan .rate {
+    color: #ff8c00;
+    text-shadow: 0 0 4px #ff8c00, 0 0 2px #e8d5c4;
+}
+
+.main-table.theme-garan ~ .btn-area .btn,
+.main-table.theme-garan ~ .btn-area .btn-small {
+    background: linear-gradient(90deg, #2c1810 0%, #4a2c1a 100%);
+    color: #e8d5c4;
+    border: 2px solid #8b4513;
+    box-shadow: 0 0 8px #8b451344;
+    text-shadow: 0 0 2px #e8d5c4;
+}
+
+.main-table.theme-garan ~ .btn-area .btn:hover,
+.main-table.theme-garan ~ .btn-area .btn-small:hover {
+    background: #4a2c1a;
+    color: #ff8c00;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 8px #ff8c0044;
+}
+
+.theme-area.theme-garan .window-btns .close-btn,
+.theme-area.theme-garan .window-btns .min-btn {
+    background: #2c1810;
+    color: #e8d5c4;
+    border: 2px solid #8b4513;
+}
+
+/* テーマ: ロイヤル */
+.main-table.theme-royal {
+    background: linear-gradient(135deg, #404040 0%, #606060 50%, #303030 100%); /* 暗いグレーのグラデーション */
+    color: #f0f0f0; /* 明るいシルバーの文字 */
+    border: 2px solid #808080; /* 中間グレーのボーダー */
+    box-shadow: 0 0 12px #80808044, 0 0 20px #40404033;
+}
+
+.main-table.theme-royal th, .main-table.theme-royal td {
+    background: #505050; /* セル背景も暗いグレー */
+    color: #ffd700; /* 鮮やかな金色の文字 */
+    border: 1px solid #808080; /* 中間グレーのボーダー */
+    text-shadow: 0 0 2px #404040; /* 影を軽く */
+}
+
+.main-table.theme-royal .value, .main-table.theme-royal .rate {
+    color: #ff6b6b; /* 明るめの紅の数値 */
+    text-shadow: 0 0 3px #ff6b6b, 0 0 2px #404040; /* 紅のグロー */
+    font-weight: bold;
+}
+
+/* ボタンのスタイル */
+.main-table.theme-royal ~ .btn-area .btn,
+.main-table.theme-royal ~ .btn-area .btn-small {
+    background: linear-gradient(90deg, #c0c0c0 0%, #e0e0e0 100%); /* メタリックなボタン背景 */
+    color: #404040; /* 濃いグレーの文字 */
+    border: 2px solid #b22222;
+    box-shadow: 0 0 8px #b2222244;
+    text-shadow: 0 0 2px #fff;
+}
+
+.main-table.theme-royal ~ .btn-area .btn:hover,
+.main-table.theme-royal ~ .btn-area .btn-small:hover {
+    background: #b22222; /* ホバーで深紅に */
+    color: #f0f0f0; /* 文字は明るいシルバーに */
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 12px #b2222288;
+}
+
+/* ウィンドウボタンのスタイル */
+.theme-area.theme-royal .window-btns .close-btn,
+.theme-area.theme-royal .window-btns .min-btn {
+    background: #b0b0b0; /* メタリックな背景 */
+    color: #404040; /* 濃いグレーのアイコン */
+    border: 2px solid #b22222;
+}
+
+.theme-area.theme-royal .window-btns .close-btn:hover,
+.theme-area.theme-royal .window-btns .min-btn:hover {
+    background: #b22222; /* ホバーで深紅に */
+    color: #f0f0f0; /* アイコンは明るいシルバーに */
 } 
