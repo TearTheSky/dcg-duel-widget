@@ -32,39 +32,7 @@
     border: 2px solid #222;
 }
 
-/* テーマ: ダーク */
-.main-table.theme-dark {
-    background: #222;
-    color: #fff;
-    border: 2px solid #444;
-    box-shadow: 2px 2px 0 #111;
-}
 
-.main-table.theme-dark th, .main-table.theme-dark td {
-    background: #222;
-    color: #fff;
-    border: 1px solid #444;
-}
-
-.main-table.theme-dark ~ .btn-area .btn,
-.main-table.theme-dark ~ .btn-area .btn-small {
-    background: #222;
-    color: #fff;
-    border: 2px solid #444;
-    box-shadow: 1px 1px 0 #111;
-}
-
-.main-table.theme-dark ~ .btn-area .btn:hover,
-.main-table.theme-dark ~ .btn-area .btn-small:hover {
-    background: #333;
-}
-
-.theme-area.theme-dark .window-btns .close-btn,
-.theme-area.theme-dark .window-btns .min-btn {
-    background: #222;
-    color: #fff;
-    border: 2px solid #444;
-}
 
 /* テーマ: ピンク（綿菓子） */
 .main-table.theme-pink {
@@ -100,35 +68,35 @@
     border: 2px solid #f7b5e4;
 }
 
-/* テーマ: 黒透明 */
-.main-table.theme-blackglass {
+/* テーマ: ダーク */
+.main-table.theme-dark {
     background: rgba(20,20,20,0.7);
     color: #fff;
     border: 2px solid #444;
     box-shadow: 2px 2px 8px #0008;
 }
 
-.main-table.theme-blackglass th, .main-table.theme-blackglass td {
+.main-table.theme-dark th, .main-table.theme-dark td {
     background: rgba(20,20,20,0.7);
     color: #fff;
     border: 1px solid #444;
 }
 
-.main-table.theme-blackglass ~ .btn-area .btn,
-.main-table.theme-blackglass ~ .btn-area .btn-small {
+.main-table.theme-dark ~ .btn-area .btn,
+.main-table.theme-dark ~ .btn-area .btn-small {
     background: rgba(20,20,20,0.7);
     color: #fff;
     border: 2px solid #444;
     box-shadow: 1px 1px 0 #222;
 }
 
-.main-table.theme-blackglass ~ .btn-area .btn:hover,
-.main-table.theme-blackglass ~ .btn-area .btn-small:hover {
+.main-table.theme-dark ~ .btn-area .btn:hover,
+.main-table.theme-dark ~ .btn-area .btn-small:hover {
     background: rgba(40,40,40,0.8);
 }
 
-.theme-area.theme-blackglass .window-btns .close-btn,
-.theme-area.theme-blackglass .window-btns .min-btn {
+.theme-area.theme-dark .window-btns .close-btn,
+.theme-area.theme-dark .window-btns .min-btn {
     background: rgba(20,20,20,0.7);
     color: #fff;
     border: 2px solid #444;
