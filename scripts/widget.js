@@ -1,6 +1,7 @@
 // 基底ウィジェットクラス - 共通機能を提供
 class BaseWidget {
     constructor() {
+        this.matches = 0;
         this.wins = 0;
         this.losses = 0;
         this.gameType = 'base';
@@ -8,13 +9,18 @@ class BaseWidget {
 
     // 共通の表示更新関数
     updateDisplay() {
-        const totalMatches = this.wins + this.losses;
+        const completedMatches = this.wins + this.losses;
         
-        document.getElementById('matchCount').textContent = totalMatches;
-        document.getElementById('winCount').textContent = this.wins;
-        document.getElementById('winRate').textContent = (totalMatches > 0 ? Math.round((this.wins / totalMatches) * 100) : 0) + '%';
+        document.getElementById('matchCount').textContent = this.matches;
+        document.getElementById('winCount').textContent = `${this.wins} / ${this.matches}`;
+        document.getElementById('winRate').textContent = (completedMatches > 0 ? Math.round((this.wins / completedMatches) * 100) : 0) + '%';
         document.getElementById('detailWin').textContent = this.wins;
         document.getElementById('detailLose').textContent = this.losses;
+    }
+
+    // コイン結果（先攻/後攻を含む）の入力時に試合開始を記録
+    recordMatchStart() {
+        this.matches++;
     }
 
     // 共通の勝利/敗北関数
@@ -30,6 +36,7 @@ class BaseWidget {
 
     // 共通のリセット関数
     resetAll() { 
+        this.matches = 0;
         this.wins = 0; 
         this.losses = 0; 
         this.updateDisplay(); 
@@ -88,4 +95,4 @@ function initializeWidget() {
     if (currentWidget) {
         currentWidget.initialize();
     }
-} 
+}

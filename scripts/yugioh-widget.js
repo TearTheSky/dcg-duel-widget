@@ -13,7 +13,7 @@ class YugiohWidget extends BaseWidget {
         
         const totalCoins = this.coinSuccesses + this.coinFails;
         
-        document.getElementById('coinSuccess').textContent = this.coinSuccesses;
+        document.getElementById('coinSuccess').textContent = `${this.coinSuccesses} / ${totalCoins}`;
         document.getElementById('successRate').textContent = (totalCoins > 0 ? Math.round((this.coinSuccesses / totalCoins) * 100) : 0) + '%';
         
         // 詳細エリアも更新
@@ -23,12 +23,14 @@ class YugiohWidget extends BaseWidget {
 
     // マスターデュエル用のコイン関数
     addCoinSuccess() { 
-        this.coinSuccesses++; 
+        this.coinSuccesses++;
+        this.recordMatchStart();
         this.updateDisplay(); 
     }
 
     addCoinFail() { 
-        this.coinFails++; 
+        this.coinFails++;
+        this.recordMatchStart();
         this.updateDisplay(); 
     }
 
@@ -58,4 +60,4 @@ class YugiohWidget extends BaseWidget {
 function initializeYugiohWidget() {
     currentWidget = new YugiohWidget();
     currentWidget.initialize();
-} 
+}
