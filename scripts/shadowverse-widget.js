@@ -17,7 +17,7 @@ class ShadowverseWidget extends BaseWidget {
         // 先攻/後攻の表示を切り替え
         if (this.isFirstMode) {
             document.getElementById('coinLabel').textContent = '先攻';
-            document.getElementById('coinSuccess').textContent = this.firstCount;
+            document.getElementById('coinSuccess').textContent = `${this.firstCount} / ${totalTurns}`;
             document.getElementById('successRate').textContent = (totalTurns > 0 ? Math.round((this.firstCount / totalTurns) * 100) : 0) + '%';
             // インジケーターは常に「先攻数：」「後攻数：」の順番で固定
             document.getElementById('detailLabel1').textContent = '先攻数：';
@@ -26,7 +26,7 @@ class ShadowverseWidget extends BaseWidget {
             document.getElementById('detailCoinFail').textContent = this.secondCount;
         } else {
             document.getElementById('coinLabel').textContent = '後攻';
-            document.getElementById('coinSuccess').textContent = this.secondCount;
+            document.getElementById('coinSuccess').textContent = `${this.secondCount} / ${totalTurns}`;
             document.getElementById('successRate').textContent = (totalTurns > 0 ? Math.round((this.secondCount / totalTurns) * 100) : 0) + '%';
             // インジケーターは常に「先攻数：」「後攻数：」の順番で固定
             document.getElementById('detailLabel1').textContent = '先攻数：';
@@ -40,12 +40,14 @@ class ShadowverseWidget extends BaseWidget {
     addCoinSuccess() { 
         // 「先攻」ボタンが押された時は常に先攻にカウントアップ
         this.firstCount++;
+        this.recordMatchStart();
         this.updateDisplay(); 
     }
 
     addCoinFail() { 
         // 「後攻」ボタンが押された時は常に後攻にカウントアップ
         this.secondCount++;
+        this.recordMatchStart();
         this.updateDisplay(); 
     }
 
@@ -85,4 +87,4 @@ function initializeShadowverseWidget() {
 }
 
 // DOM読み込み完了時に初期化
-document.addEventListener('DOMContentLoaded', initializeShadowverseWidget); 
+document.addEventListener('DOMContentLoaded', initializeShadowverseWidget);
