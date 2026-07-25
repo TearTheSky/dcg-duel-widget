@@ -1,6 +1,6 @@
 {
   "name": "dcg-duel-widget",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "description": "遊戯王マスターデュエル配信用ウィジェット",
   "main": "main.js",
   "scripts": {
