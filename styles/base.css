@@ -98,10 +98,21 @@ th {
     min-width: 50px;
 }
 
+/* 「現在値 / 総数」を折り返さず、3桁まで読みやすく表示 */
+#coinSuccess,
+#winCount {
+    white-space: nowrap;
+    min-width: 82px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    font-size: 20px;
+    font-variant-numeric: tabular-nums;
+}
+
 .rate {
     font-size: 22px;
     padding: 0 6px 0 6px !important;
     min-width: 48px;
     vertical-align: middle;
     display: table-cell;
-} 
+}
